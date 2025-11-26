@@ -59,7 +59,7 @@ def reamur_ke_kelvin(r):
 
 def lanjut():
     tanya = input("\nApakah ingin lanjut atau tidak? ").lower()
-    return tanya == "y"
+    return tanya == "y", "ya", "lanjut"
 
 #PROGRAM UTAMA
 
