@@ -59,7 +59,7 @@ def reamur_ke_kelvin(r):
 
 def lanjut():
     tanya = input("\nApakah ingin lanjut atau tidak? ").lower()
-    return tanya == "y", "ya", "lanjut"
+    return tanya == "y", "ya", "lanjut" .lower()
 
 #PROGRAM UTAMA
 
@@ -67,78 +67,92 @@ def lanjut():
 def konversi_dari_celsius():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
+        print(f"\033[34m{'='*50}\033[0m")
         print(f"{suhu}°C sama dengan:")
         print(f"  - Fahrenheit : {celsius_ke_fahrenheit(suhu):.2f}°F")
         print(f"  - Kelvin     : {celsius_ke_kelvin(suhu):.2f}K")
         print(f"  - Reamur     : {celsius_ke_reamur(suhu):.2f}°R")
-        print(f"{'='*50}")
-        if not lanjut():
+        print(f"\033[34m{'='*50}\033[0m")
+        if lanjut() == False:
+            print ("\033[34m=\033[0m"*50)
+            print ("\033[92mTerima kasih telah menggunakan program ini!\033[0m")
+            print ("\033[34m=\033[0m"*50)
             exit()
     except ValueError:
-        print("\nError: Masukkan angka yang valid!")
+        print("\033[91m\nError: Masukkan angka yang valid!\033[0m")
 
 #KONVERSI DARI FAHRENHEIT
 def konversi_dari_fahrenheit():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
-        print(f"\n{'='*50}")
+        print(f"\033[34m{'='*50}\033[0m")
         print(f"{suhu}°F sama dengan:")
         print(f"  - Celsius    : {fahrenheit_ke_celsius(suhu):.2f}°C")
         print(f"  - Kelvin     : {fahrenheit_ke_kelvin(suhu):.2f}K")
         print(f"  - Reamur     : {fahrenheit_ke_reamur(suhu):.2f}°R")
-        print(f"{'='*50}")
-        if not lanjut():
+        print(f"\033[34m{'='*50}\033[0m")
+        if lanjut() == False:
+            print ("\033[34m=\033[0m"*50)
+            print ("\033[92mTerima kasih telah menggunakan program ini!\033[0m")
+            print ("\033[34m=\033[0m"*50)
             exit()
     except ValueError:
-        print("\nError: Masukkan angka yang valid!")
+        print("\033[91m\nError: Masukkan angka yang valid!\033[0m")
 
 #KONVERSI DARI KELVIN
 def konversi_dari_kelvin():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
         if suhu < 0:
-            print("\nError: Suhu Kelvin tidak boleh negatif!")
+            print("\033[91m\nError: Suhu Kelvin tidak boleh negatif!\033[0m")
             return
-        print(f"\n {'='*50}")
+        print(f"\n \033[34m{'='*50}\033[0m")
         print(f"{suhu}K sama dengan:")
         print(f"  - Celsius    : {kelvin_ke_celsius(suhu):.2f}°C")
         print(f"  - Fahrenheit : {kelvin_ke_fahrenheit(suhu):.2f}°F")
         print(f"  - Reamur     : {kelvin_ke_reamur(suhu):.2f}°R")
-        print(f"{'='*50}")
-        if not lanjut():
+        print(f"\033[34m{'='*50}\033[0m")
+        if lanjut() == False:
+            print ("\033[34m=\033[0m"*50)
+            print ("\033[92mTerima kasih telah menggunakan program ini!\033[0m")
+            print ("\033[34m=\033[0m"*50)
             exit()
     except ValueError:
-        print("\nError: Masukkan angka yang valid!")
+        print("\033[91m\nError: Masukkan angka yang valid!\033[0m")
 
 #KONVERSI DARI REAMUR
 def konversi_dari_reamur():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
-        print(f"\n{'='*50}")
+        print(f"\n\033[34m{'='*50}\033[0m")
         print(f"{suhu}°R sama dengan:")
         print(f"  - Celsius    : {reamur_ke_celsius(suhu):.2f}°C")
         print(f"  - Fahrenheit : {reamur_ke_fahrenheit(suhu):.2f}°F")
         print(f"  - Kelvin     : {reamur_ke_kelvin(suhu):.2f}K")
-        print(f"{'='*50}")
-        if not lanjut():
+        print(f"\033[34m{'='*50}\033[0m")
+        if lanjut() == False:
+            print ("\033[34m=\033[0m"*50)
+            print ("\033[92mTerima kasih telah menggunakan program ini!\033[0m")
+            print ("\033[34m=\033[0m"*50)
             exit()
     except ValueError:
-        print("\nError: Masukkan angka yang valid!")
+        print("\033[91m\nError: Masukkan angka yang valid!\033[0m")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#FUNGSI UTAMA PROGRAM
+#=============================================================#
+#                   FUNGSI UTAMA PROGRAM                      #
+#=============================================================#
 def main():
     while True:
-        print("\n" + "="*50)
-        print("PROGRAM KONVERSI SUHU".center(50))
-        print("="*50)
+        print("\n" + "\033[34m=\033[0m"*50)
+        print(f"{'PROGRAM KONVERSI SUHU'.center(50)}")
+        print("\033[34m=\033[0m"*50)
         print("\nPilih satuan suhu awal:")
         print("1. Celsius")
         print("2. Fahrenheit")
         print("3. Kelvin")
         print("4. Reamur")
         print("5. Keluar")
-        print("="*50)
+        print("\033[34m=\033[0m"*50)
         
         pilihan = input("\nMasukkan pilihan (1-5): ")
         
@@ -151,12 +165,12 @@ def main():
         elif pilihan == '4':
             konversi_dari_reamur()
         elif pilihan == '5':
-            print("="*50)
-            print("\nTerima kasih telah menggunakan program ini!")
-            print("="*50)
+            print("\033[34m=\033[0m"*50)
+            print("\033[92m\nTerima kasih telah menggunakan program ini!\033[0m")
+            print("\033[34m=\033[0m"*50)
             break
         else:
-            print("\nPilihan tidak ada! Silakan pilih 1-5.")
+            print("\033[91m\nPilihan tidak ada! Silakan pilih 1-5.\033[0m")
 
 if __name__== "__main__":
     main()
