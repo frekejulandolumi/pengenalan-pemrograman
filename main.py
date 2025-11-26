@@ -62,8 +62,7 @@ def reamur_ke_kelvin(r):
 def konversi_dari_celsius():
     """Menu konversi dari Celsius"""
     try:
-        suhu = float(input("\nMasukkan nilai suhu dalam Celsius: "))
-        print(f"\n{'='*50}")
+        suhu = float(input())
         print(f"{suhu}°C sama dengan:")
         print(f"  - Fahrenheit : {celsius_ke_fahrenheit(suhu):.2f}°F")
         print(f"  - Kelvin     : {celsius_ke_kelvin(suhu):.2f}K")
@@ -75,7 +74,7 @@ def konversi_dari_celsius():
 def konversi_dari_fahrenheit():
     """Menu konversi dari Fahrenheit"""
     try:
-        suhu = float(input("\nMasukkan nilai suhu dalam Fahrenheit: "))
+        suhu = float(input())
         print(f"\n{'='*50}")
         print(f"{suhu}°F sama dengan:")
         print(f"  - Celsius    : {fahrenheit_ke_celsius(suhu):.2f}°C")
@@ -83,14 +82,14 @@ def konversi_dari_fahrenheit():
         print(f"  - Reamur     : {fahrenheit_ke_reamur(suhu):.2f}°R")
         print(f"{'='*50}")
     except ValueError:
-        print("\n❌ Error: Masukkan angka yang valid!")
+        print("\nError: Masukkan angka yang valid!")
 
 def konversi_dari_kelvin():
     """Menu konversi dari Kelvin"""
     try:
-        suhu = float(input("\nMasukkan nilai suhu dalam Kelvin: "))
+        suhu = float(input())
         if suhu < 0:
-            print("\n❌ Error: Suhu Kelvin tidak boleh negatif!")
+            print("\nError: Suhu Kelvin tidak boleh negatif!")
             return
         print(f"\n{'='*50}")
         print(f"{suhu}K sama dengan:")
@@ -99,7 +98,7 @@ def konversi_dari_kelvin():
         print(f"  - Reamur     : {kelvin_ke_reamur(suhu):.2f}°R")
         print(f"{'='*50}")
     except ValueError:
-        print("\n❌ Error: Masukkan angka yang valid!")
+        print("\nError: Masukkan angka yang valid!")
 
 def konversi_dari_reamur():
     """Menu konversi dari Reamur"""
@@ -112,7 +111,7 @@ def konversi_dari_reamur():
         print(f"  - Kelvin     : {reamur_ke_kelvin(suhu):.2f}K")
         print(f"{'='*50}")
     except ValueError:
-        print("\n❌ Error: Masukkan angka yang valid!")
+        print("\nError: Masukkan angka yang valid!")
 
 def main():
     """Fungsi utama program"""
@@ -143,7 +142,7 @@ def main():
             print("="*50)
             break
         else:
-            print("\n❌ Pilihan tidak valid! Silakan pilih 1-5.")
+            print("\nPilihan tidak valid! Silakan pilih 1-5.")
 
 if __name__ == "__main__":
     main()
