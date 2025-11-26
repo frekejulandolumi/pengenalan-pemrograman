@@ -61,12 +61,37 @@ def lanjut():
     tanya = input("\nApakah ingin lanjut atau tidak? ").lower()
     return tanya == "y", "ya", "lanjut" .lower()
 
+#============================
+# Fitur tambahan
+def tampilkan_skala_1_10(suhu_celsius):
+    if suhu_celsius <= 0:
+        level = 0
+    elif suhu_celsius >= 100:
+        level = 10
+    else:
+        level = int(suhu_celsius / 10)
+    
+    bar_isi    = "█" * level
+    bar_kosong = "░" * (10 - level) 
+    
+    if level == 0:   status = "Sangat Dingin"
+    elif level < 4:  status = "Normal"
+    elif level < 7:  status = "Hangat"
+    elif level < 10: status = "Panas"
+    else:            status = "Ekstrem"
+
+    print("\nINTENSITAS PANAS (SKALA 0-10):")
+    print(f"0 [{bar_isi}{bar_kosong}] 10  -> Level {level}/10")
+    print(f"   Status: {status}")
+    print("-" * 50)
+
 #PROGRAM UTAMA
 
 #KONVERSI DARI CELCIUS
 def konversi_dari_celsius():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
+        tampilkan_skala_1_10(suhu)
         print(f"\033[34m{'='*50}\033[0m")
         print(f"{suhu}°C sama dengan:")
         print(f"  - Fahrenheit : {celsius_ke_fahrenheit(suhu):.2f}°F")
@@ -85,6 +110,8 @@ def konversi_dari_celsius():
 def konversi_dari_fahrenheit():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
+        c_temp = fahrenheit_ke_celsius(suhu)
+        tampilkan_skala_1_10(c_temp)
         print(f"\033[34m{'='*50}\033[0m")
         print(f"{suhu}°F sama dengan:")
         print(f"  - Celsius    : {fahrenheit_ke_celsius(suhu):.2f}°C")
@@ -106,6 +133,8 @@ def konversi_dari_kelvin():
         if suhu < 0:
             print("\033[91m\nError: Suhu Kelvin tidak boleh negatif!\033[0m")
             return
+        c_temp = kelvin_ke_celsius(suhu)
+        tampilkan_skala_1_10(c_temp)
         print(f"\n \033[34m{'='*50}\033[0m")
         print(f"{suhu}K sama dengan:")
         print(f"  - Celsius    : {kelvin_ke_celsius(suhu):.2f}°C")
@@ -124,6 +153,8 @@ def konversi_dari_kelvin():
 def konversi_dari_reamur():
     try:
         suhu = float(input("MASUKKAN SUHU: "))
+        c_temp = reamur_ke_celsius(suhu)
+        tampilkan_skala_1_10(c_temp)
         print(f"\n\033[34m{'='*50}\033[0m")
         print(f"{suhu}°R sama dengan:")
         print(f"  - Celsius    : {reamur_ke_celsius(suhu):.2f}°C")
