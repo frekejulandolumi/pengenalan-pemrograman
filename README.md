@@ -69,3 +69,25 @@ Dengan validasi input, tampilan berwarna, dan sistem menu yang jelas, program in
 ### Fitur Lanjut/Tidak Lanjut
   - Setelah konversi, pengguna ditanya apakah ingin melanjutkan.
   - Jika memilih tidak, program berhenti dengan pesan terima kasih.
+    
+## Panduan Instalasi
+Ikuti langkah-langkah berikut agar program *Konversi Suhu Python* siap dijalankan:
+
+> *💡 Tips:* Pastikan Python versi 3.x sudah terinstal sebelum memulai.
+
+### 1️⃣ Clone Repository
+git clone https://github.com/username/nama-repo.git
+📌 Catatan: Pastikan koneksi internet stabil supaya clone berhasil.
+
+### 2️⃣ Masuk ke Folder Project
+cd nama-repo
+✅ Pastikan berada di folder yang benar sebelum melanjutkan step berikutnya. 
+
+### 3️⃣ Buat Virtual Environment (Opsional)
+python -m venv venv
+Aktifkan:
+  - Windows: venv\Scripts\activate
+  - Mac/Linux: source venv/bin/activate
+
+### 4️⃣ Install Dependencies
+pip install -r requirements.txt
