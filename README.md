@@ -97,10 +97,20 @@ cd nama-repo
 python -m venv venv
 ```
 Aktifkan:
-  - Windows: venv\Scripts\activate
-  - Mac/Linux: source venv/bin/activate
-
+  - Windows:
+    ```bash
+    venv\Scripts\activate
+    ```
+  - Mac/Linux:
+    ```bash
+    source venv/bin/activate
+    ```
+📌 Catatan: Virtual environment membantu supaya library program tidak bentrok dengan library Python lain di komputer.
 
 ### 4️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
+💡 Tips: Gunakan pip list untuk cek library sudah terpasang.
+
+⚠️ Jika ada error, coba jalankan python -m pip install --upgrade pip dulu.
