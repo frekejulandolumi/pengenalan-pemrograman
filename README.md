@@ -114,3 +114,28 @@ pip install -r requirements.txt
 💡 Tips: Gunakan pip list untuk cek library sudah terpasang.
 
 ⚠️ Jika ada error, coba jalankan python -m pip install --upgrade pip dulu.
+
+## Panduan Menjalankan
+
+
+
+
+
+
+
+## Dokumentasi Teknis
+
+
+
+
+
+
+
+## Daftar Kontributor 👥 
+
+| No|            Nama                |      NIM     |           GitHub         |
+|---|   ------                       |   --------   |  ----------------------- |
+| 1 |Freke Julando Cristen Lumi      | 250211060081 | https://github.com/akun2 |
+| 2 |Kharis Evangel Mantiri          | 250211060086 | https://github.com/akun2 |
+| 3 |Mentari Kristen Rachaelea Toreh | 250211060087 | https://github.com/akun2 |
+| 4 |Mirecle Zefanya Kapoh           | 250211060088 | https://github.com/akun2 |
