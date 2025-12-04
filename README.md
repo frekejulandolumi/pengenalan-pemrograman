@@ -137,5 +137,5 @@ pip install -r requirements.txt
 |---|   ------                       |   --------   |     -----------------------                  |
 | 1 |Freke Julando Cristen Lumi      | 250211060081 | https://github.com/frekejulandolumi          |
 | 2 |Kharis Evangel Mantiri          | 250211060086 | https://github.com/nimeightysix-86           |
-| 3 |Mentari Kristen Rachaelea Toreh | 250211060087 | https:/github.com/mentarirachaelea          |
+| 3 |Mentari Kristen Rachaelea Toreh | 250211060087 | https://github.com/mentarirachaelea          |
 | 4 |Mirecle Zefanya Kapoh           | 250211060088 | https://github.com/mireclezefanyakapoh06-afk |
