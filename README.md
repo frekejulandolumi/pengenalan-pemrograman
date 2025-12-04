@@ -22,7 +22,8 @@
 * [Fitur Utama](#fitur-utama)
 * [Panduan Instalasi](#panduan-instalasi)
 * [Panduan Menjalankan Program](#panduan-menjalankan-program)
-* [Dokumentasi Teknis](#dokumentasi-teknis)
+* [Contoh Penggunaan](#contoh-penggunaan)
+* [Flowchart Program](#flowchart-prtogram)
 * [Daftar Kontributor](#daftar-kontributor)
 
 ## Pendahuluan
@@ -115,54 +116,107 @@ pip install -r requirements.txt
 
 ⚠️ Jika ada error, coba jalankan python -m pip install --upgrade pip dulu.
 
-## Panduan Menjalankan
 
-
-
-
-
-
-
-## Dokumentasi Teknis
-```mermaid
-graph TD;
-
-A(start) ---> B[Pilih satuan suhu];
-
-B --> C{Piliihan?};
-
-C -->|1| D[Input suhu Celcius];
-C -->|2| E[Input suhu Fahrenheit];
-C -->|3| F[Input suhu Kelvin];
-C -->|4| G[Input suhu Reamur];
-C -->|5| ZA[KELUAR PROGRAM];
-
-%%==== Celcius ====
-D -->D1[Hitung Fahrenheit, Kelvin, Reamur];
-D1 -->D2[Tampilkan Skala 1-10];
-D2 -->D3{Lanjut?};
-D3 -->|Ya| B;
-D3 -->|Tidak| ZA;
-
-%% ==== Fahrenheit ====
-E -->E1[Hitung Celsius , Kevin, Reamur];
-E1 -->E2[Tampilkan skala 1-10];
-E2 --> E3{Lanjut?};
-E3 -->|Ya| B;
-F4 -->|Tidak| ZA;
-
-%% ==== Reamur ====
-G -->G1[Hitung Celcius, Fahrenheit, Kelvin];
-G1 -->G2[Tampilkan Skala 1-10];
-G2 -->G3{Lanjut?};
-G3 -->|Ya| B;
-G3 -->|Tidak| ZA;
-
-ZA --> ZB[Program Selesai]
+## Panduan Menjalankan Program
+1. Pastikan Python sudah terinstall
+```bash
+python --version
+```
+2. Download/Clone repository
+```bash
+git clone [url-repository-anda]
+cd [nama-folder]
+```
+4. Jalankan program
+```bash
+python konversi_suhu.py
 ```
 
+Cara Menggunakan
+
+Pilih satuan suhu awal (1-5)
+Masukkan nilai suhu
+Program akan menampilkan hasil konversi ke satuan lainnya
+Pilih "ya" untuk konversi lagi atau "tidak" untuk keluar
+
+## Contoh Penggunaan
+---------------------
+PROGRAM KONVERSI SUHU
+---------------------
+
+Pilih satuan suhu awal:
+1. Celsius
+2. Fahrenheit
+3. Kelvin
+4. Reamur
+5. Keluar
 
 
+Masukkan pilihan (1-5): 1
+MASUKKAN SUHU: 25
+
+INTENSITAS PANAS (SKALA 0-10):
+0 [██░░░░░░░░] 10  -> Level 2/10
+   Status: Normal
+
+------------------------------------
+25.0°C sama dengan:
+  - Fahrenheit : 77.00°F
+  - Kelvin     : 298.15K
+  - Reamur     : 20.00°R
+------------------------------------
+
+## Flowchart Program
+```mermaid
+   flowchart TD
+    Start([MULAI]) --> Menu[Tampilkan Menu<br/>Pilihan 1-5]
+    Menu --> Pilih{Pilihan?}
+    
+    Pilih -->|1| C[Input Celsius]
+    Pilih -->|2| F[Input Fahrenheit]
+    Pilih -->|3| K[Input Kelvin]
+    Pilih -->|4| R[Input Reamur]
+    Pilih -->|5| Keluar([SELESAI])
+    Pilih -->|Invalid| Error[Error]
+    
+    Error --> Menu
+    
+    C --> Konversi1[Konversi & Tampilkan Hasil]
+    F --> Konversi2[Konversi & Tampilkan Hasil]
+    K --> Konversi3[Konversi & Tampilkan Hasil]
+    R --> Konversi4[Konversi & Tampilkan Hasil]
+    
+    Konversi1 --> Lanjut1{Lanjut?}
+    Konversi2 --> Lanjut2{Lanjut?}
+    Konversi3 --> Lanjut3{Lanjut?}
+    Konversi4 --> Lanjut4{Lanjut?}
+    
+    Lanjut1 -->|Ya| Menu
+    Lanjut1 -->|Tidak| Keluar
+    Lanjut2 -->|Ya| Menu
+    Lanjut2 -->|Tidak| Keluar
+    Lanjut3 -->|Ya| Menu
+    Lanjut3 -->|Tidak| Keluar
+    Lanjut4 -->|Ya| Menu
+    Lanjut4 -->|Tidak| Keluar
+    
+    style Start fill:#003366
+    style Keluar fill:#003366
+    style Menu fill:#003366
+    style Error fill:#8b0000
+    style C fill:#003366
+    style F fill:#003366
+    style K fill:#003366
+    style R fill:#003366
+    style Konversi1 fill:#4682b4
+    style Konversi2 fill:#4682b4
+    style Konversi3 fill:#4682b4
+    style Konversi4 fill:#4682b4
+    style Lanjut1 fill:#778ba5
+    style Lanjut2 fill:#778ba5
+    style Lanjut3 fill:#778ba5
+    style Lanjut4 fill:#778ba5
+```
 
 
 
