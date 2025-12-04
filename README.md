@@ -218,9 +218,40 @@ INTENSITAS PANAS (SKALA 0-10):
     style Lanjut4 fill:#778ba5
 ```
 
+# Penjelasan Flowchart
 
+## 1. Titik Awal (Inisialisasi)
+ * MULAI: Program dimulai dari titik ini.
+ * Tampilkan Menu: Program menampilkan antarmuka menu kepada pengguna yang berisi 5 pilihan:
+   * Input Celsius
+   * Input Fahrenheit
+   * Input Kelvin
+   * Input Reamur
+   * Keluar
+## 2. Pengambilan Keputusan (Decision Making)
+Setelah menu ditampilkan, program meminta input dari pengguna (Pilihan?) dan alur akan bercabang berdasarkan input tersebut:
+ * Jalur 1 (Celsius): Jika pengguna memilih angka 1, program akan meminta pengguna memasukkan nilai suhu dalam Celsius.
+ * Jalur 2 (Fahrenheit): Jika memilih angka 2, program meminta input suhu Fahrenheit.
+ * Jalur 3 (Kelvin): Jika memilih angka 3, program meminta input suhu Kelvin.
+ * Jalur 4 (Reamur): Jika memilih angka 4, program meminta input suhu Reamur.
+ * Jalur 5 (Keluar): Jika memilih angka 5, program langsung menuju ke titik SELESAI (program berhenti).
+ * Jalur Invalid (Error): Jika pengguna memasukkan input selain angka 1-5 (misalnya angka 7 atau huruf), program akan masuk ke status Error dan otomatis kembali menampilkan Menu utama.
+## 3. Proses Konversi & Output
+Jika pengguna memilih jalur 1 sampai 4:
+ * Setelah nilai suhu dimasukkan, program akan melakukan proses perhitungan (rumus konversi) untuk mengubah suhu tersebut ke satuan lainnya (misalnya, jika input Celsius, maka akan dikonversi ke Fahrenheit, Kelvin, dan Reamur).
+ * Hasil konversi tersebut kemudian ditampilkan ke layar.
+## 4. Logika Perulangan (Looping)
+Setelah hasil konversi ditampilkan, program tidak langsung berhenti.
+ * Lanjut?: Program akan bertanya kepada pengguna, "Apakah ingin lanjut?" (biasanya Y/N).
+   * Ya: Jika pengguna menjawab "Ya", alur panah akan kembali ke atas menuju Tampilkan Menu. Pengguna bisa melakukan konversi lagi.
+   * Tidak: Jika pengguna menjawab "Tidak", alur panah mengarah ke SELESAI dan program ditutup.
+## Ringkasan Warna (Berdasarkan Style Flowchart)
+ * Biru Tua (Start/Menu/Input/End): Menandakan komponen utama antarmuka dan input/output dasar.
+ * Merah (Error): Menandakan penanganan kesalahan input.
+ * Biru Terang (Konversi): Menandakan proses komputasi atau pengolahan data.
+ * Abu-abu/Biru Pucat (Lanjut?): Menandakan titik keputusan untuk mengulang program atau tidak.
 
-## Daftar Kontributor 👥 
+# Daftar Kontributor 👥 
 
 | No|            Nama                |      NIM     |                   GitHub                     |
 |---|   ------                       |   --------   |     -----------------------                  |
