@@ -124,7 +124,42 @@ pip install -r requirements.txt
 
 
 ## Dokumentasi Teknis
+```mermaid
+graph TD;
 
+A(start) ---> B[Pilih satuan suhu];
+
+B --> C{Piliihan?};
+
+C -->|1| D[Input suhu Celcius];
+C -->|2| E[Input suhu Fahrenheit];
+C -->|3| F[Input suhu Kelvin];
+C -->|4| G[Input suhu Reamur];
+C -->|5| ZA[KELUAR PROGRAM];
+
+%%==== Celcius ====
+D -->D1[Hitung Fahrenheit, Kelvin, Reamur];
+D1 -->D2[Tampilkan Skala 1-10];
+D2 -->D3{Lanjut?};
+D3 -->|Ya| B;
+D3 -->|Tidak| ZA;
+
+%% ==== Fahrenheit ====
+E -->E1[Hitung Celsius , Kevin, Reamur];
+E1 -->E2[Tampilkan skala 1-10];
+E2 --> E3{Lanjut?};
+E3 -->|Ya| B;
+F4 -->|Tidak| ZA;
+
+%% ==== Reamur ====
+G -->G1[Hitung Celcius, Fahrenheit, Kelvin];
+G1 -->G2[Tampilkan Skala 1-10];
+G2 -->G3{Lanjut?};
+G3 -->|Ya| B;
+G3 -->|Tidak| ZA;
+
+ZA --> ZB[Program Selesai]
+```
 
 
 
