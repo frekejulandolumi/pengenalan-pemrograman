@@ -23,7 +23,8 @@
 * [Panduan Instalasi](#panduan-instalasi)
 * [Panduan Menjalankan Program](#panduan-menjalankan-program)
 * [Contoh Penggunaan](#contoh-penggunaan)
-* [Flowchart Program](#flowchart-prtogram)
+* [Penjelasan Flowchart](#penjelasan-flowchart)
+* [Flowchart Program](#flowchart-program)
 * [Daftar Kontributor](#daftar-kontributor)
 
 ## Pendahuluan
@@ -218,9 +219,9 @@ INTENSITAS PANAS (SKALA 0-10):
     style Lanjut4 fill:#778ba5
 ```
 
-# Penjelasan Flowchart
+## Penjelasan Flowchart
 
-## 1. Titik Awal (Inisialisasi)
+### 1. Titik Awal (Inisialisasi)
  * MULAI: Program dimulai dari titik ini.
  * Tampilkan Menu: Program menampilkan antarmuka menu kepada pengguna yang berisi 5 pilihan:
    * Input Celsius
@@ -228,7 +229,7 @@ INTENSITAS PANAS (SKALA 0-10):
    * Input Kelvin
    * Input Reamur
    * Keluar
-## 2. Pengambilan Keputusan (Decision Making)
+### 2. Pengambilan Keputusan (Decision Making)
 Setelah menu ditampilkan, program meminta input dari pengguna (Pilihan?) dan alur akan bercabang berdasarkan input tersebut:
  * Jalur 1 (Celsius): Jika pengguna memilih angka 1, program akan meminta pengguna memasukkan nilai suhu dalam Celsius.
  * Jalur 2 (Fahrenheit): Jika memilih angka 2, program meminta input suhu Fahrenheit.
@@ -236,25 +237,25 @@ Setelah menu ditampilkan, program meminta input dari pengguna (Pilihan?) dan alu
  * Jalur 4 (Reamur): Jika memilih angka 4, program meminta input suhu Reamur.
  * Jalur 5 (Keluar): Jika memilih angka 5, program langsung menuju ke titik SELESAI (program berhenti).
  * Jalur Invalid (Error): Jika pengguna memasukkan input selain angka 1-5 (misalnya angka 7 atau huruf), program akan masuk ke status Error dan otomatis kembali menampilkan Menu utama.
-## 3. Proses Konversi & Output
+### 3. Proses Konversi & Output
 Jika pengguna memilih jalur 1 sampai 4:
  * Setelah nilai suhu dimasukkan, program akan melakukan proses perhitungan (rumus konversi) untuk mengubah suhu tersebut ke satuan lainnya (misalnya, jika input Celsius, maka akan dikonversi ke Fahrenheit, Kelvin, dan Reamur).
  * Hasil konversi tersebut kemudian ditampilkan ke layar.
-## 4. Logika Perulangan (Looping)
+### 4. Logika Perulangan (Looping)
 Setelah hasil konversi ditampilkan, program tidak langsung berhenti.
  * Lanjut?: Program akan bertanya kepada pengguna, "Apakah ingin lanjut?" (biasanya Y/N).
    * Ya: Jika pengguna menjawab "Ya", alur panah akan kembali ke atas menuju Tampilkan Menu. Pengguna bisa melakukan konversi lagi.
    * Tidak: Jika pengguna menjawab "Tidak", alur panah mengarah ke SELESAI dan program ditutup.
-## Ringkasan Warna (Berdasarkan Style Flowchart)
+### Ringkasan Warna (Berdasarkan Style Flowchart)
  * Biru Tua (Start/Menu/Input/End): Menandakan komponen utama antarmuka dan input/output dasar.
  * Merah (Error): Menandakan penanganan kesalahan input.
  * Biru Terang (Konversi): Menandakan proses komputasi atau pengolahan data.
  * Abu-abu/Biru Pucat (Lanjut?): Menandakan titik keputusan untuk mengulang program atau tidak.
 
-# Daftar Kontributor 👥 
+## Daftar Kontributor  
 
 | No|            Nama                |      NIM     |                   GitHub                     |
-|---|   ------                       |   --------   |     -----------------------                  |
+|---|--------------------------------|--------------|----------------------------------------------|
 | 1 |Freke Julando Cristen Lumi      | 250211060081 | https://github.com/frekejulandolumi          |
 | 2 |Kharis Evangel Mantiri          | 250211060086 | https://github.com/nimeightysix-86           |
 | 3 |Mentari Kristen Rachaelea Toreh | 250211060087 | https://github.com/mentarirachaelea          |
