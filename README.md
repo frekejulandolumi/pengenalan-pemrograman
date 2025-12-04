@@ -23,8 +23,8 @@
 * [Panduan Instalasi](#panduan-instalasi)
 * [Panduan Menjalankan Program](#panduan-menjalankan-program)
 * [Contoh Penggunaan](#contoh-penggunaan)
-* [Penjelasan Flowchart](#penjelasan-flowchart)
 * [Flowchart Program](#flowchart-program)
+* [Penjelasan Flowchart](#penjelasan-flowchart)
 * [Daftar Kontributor](#daftar-kontributor)
 
 ## Pendahuluan
